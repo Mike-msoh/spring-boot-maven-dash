@@ -1,0 +1,8 @@
+---
+applications:
+- name: spring-boot-maven-dash
+  memory: 512M
+  host: spring-boot-maven-dash
+  domain: mybluemix.net
+  services:
+  - dashDB-gx
