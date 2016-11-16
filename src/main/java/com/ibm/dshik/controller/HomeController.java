@@ -71,7 +71,9 @@ public class HomeController {
 		if (VCAP_SERVICES != null) {
 			try {
 				JSONObject vcap = new JSONObject(System.getenv("VCAP_SERVICES"));
-				JSONObject credentials = (JSONObject)((JSONObject)((JSONArray)vcap.get("dashDB")).get(0)).get("credentials");
+				Gson gson = new Gson();
+				logger.info("VCAP_SERVICES [{}]", gson.toJson(vcap));
+				//JSONObject credentials = (JSONObject)((JSONObject)((JSONArray)vcap.get("dashDB")).get(0)).get("credentials");
 				JSONObject dashDB0 = (JSONObject)((JSONArray)vcap.get("dashDB")).get(0);
 				String luName = (String)dashDB0.getString("name");
 				if(luName != null) {
