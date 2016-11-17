@@ -6,7 +6,5 @@ applications:
   name: spring-boot-maven-dash
   host: spring-boot-maven-dash
   disk_quota: 1024M
-  env:
-    JBP_CONFIG_LIBERTY: "app_archive: {features: [beanValidation-1.1, cdi-1.2, ejbLite-3.2, el-3.0, jaxrs-2.0, jdbc-4.1, jndi-1.0, jpa-2.1, jsf-2.2, jsonp-1.0, jsp-2.3, managedBeans-1.0, servlet-3.1, websocket-1.1]}"
   services:
   - dashDB-gx
