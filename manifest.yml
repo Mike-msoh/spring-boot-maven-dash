@@ -1,8 +1,10 @@
----
 applications:
-- name: spring-boot-maven-dash
+- path: target/spring-boot-maven-dash-1.0.war
   memory: 512M
-  host: spring-boot-maven-dash
+  instances: 1
   domain: mybluemix.net
+  name: spring-boot-maven-dash
+  host: spring-boot-maven-dash
+  disk_quota: 1024M
   services:
   - dashDB-gx
