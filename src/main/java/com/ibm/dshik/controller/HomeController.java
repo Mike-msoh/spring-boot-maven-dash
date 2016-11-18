@@ -74,10 +74,12 @@ public class HomeController {
 				Gson gson = new Gson();
 				logger.info("VCAP_SERVICES [{}]", gson.toJson(vcap));
 				//JSONObject credentials = (JSONObject)((JSONObject)((JSONArray)vcap.get("dashDB")).get(0)).get("credentials");
-				JSONObject dashDB0 = (JSONObject)((JSONArray)vcap.get("dashDB")).get(0);
-				String luName = (String)dashDB0.getString("name");
-				if(luName != null) {
-					lookupName = "jdbc/"+luName;
+				if(vcap.get("dashDB") != null) {
+					JSONObject dashDB0 = (JSONObject)((JSONArray)vcap.get("dashDB")).get(0);
+					String luName = (String)dashDB0.getString("name");
+					if(luName != null) {
+						lookupName = "jdbc/"+luName;
+					}
 				}
 				
 				logger.info("VCAP_SERVICES lookupName [{}]", lookupName);
