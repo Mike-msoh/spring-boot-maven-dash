@@ -78,11 +78,11 @@ public class HomeController {
 		//Gson gson = new Gson();
 		gson = new Gson();
 		
-		JSONObject vcapApp = getVcapApp();
-		if(vcapApp != null)
-			logger.info("VCAP_APPLICATION [{}]", gson.toJson(vcapApp));
-		else 
-			logger.info("VCAP_APPLICATION [{}]", "NULL");
+//		JSONObject vcapApp = getVcapApp();
+//		if(vcapApp != null)
+//			logger.info("VCAP_APPLICATION [{}]", gson.toJson(vcapApp));
+//		else 
+//			logger.info("VCAP_APPLICATION [{}]", "NULL");
 		
 		HttpSession session =  request.getSession();
 		String user = (String)session.getAttribute(userId);
