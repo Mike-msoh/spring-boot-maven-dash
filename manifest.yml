@@ -3,8 +3,8 @@ applications:
   memory: 512M
   instances: 2
   domain: mybluemix.net
-  name: springboot-dash
-  host: springboot-dash
+  name: springboot-msoh
+  host: springboot-msoh
   disk_quota: 1024M
   services:
   - dashDB-gx
